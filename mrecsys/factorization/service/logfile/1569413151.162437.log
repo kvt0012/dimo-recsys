@@ -1,4 +1,0 @@
-2019-09-25 19:05:55.747 ERROR deploy - _client_thread: 'float' object has no attribute 'astype'
-2019-09-25 19:05:55.748 ERROR deploy - _client_thread: None
-2019-09-25 19:07:06.912 ERROR deploy - _client_thread: 'float' object has no attribute 'astype'
-2019-09-25 19:07:06.912 ERROR deploy - _client_thread: None

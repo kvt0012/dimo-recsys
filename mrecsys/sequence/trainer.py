@@ -66,9 +66,9 @@ def run(interactions=None, time_code=None, model_type='cnn'):
         interactions, time_code, _, _ = load_latest_interactions()
 
     # train, rest = user_based_train_test_split(interactions, random_state=random_state, test_size=test_size)
-    # test, validation = user_based_train_test_split(rest, random_state=random_state)
+    # factorization, validation = user_based_train_test_split(rest, random_state=random_state)
     # train_sq = train.to_sequence()
-    # test_sq = test.to_sequence()
+    # test_sq = factorization.to_sequence()
     # validation_sq = validation.to_sequence()
     print('Training {} with {}'.format(model_type, interactions))
     train_sq = interactions.to_sequence()
@@ -100,9 +100,9 @@ def run(interactions=None, time_code=None, model_type='cnn'):
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--net', help='define the network (cnn / lstm / pooling)')
+    parser.add_argument('--model', help='define the network (cnn / lstm / pooling)')
     args = parser.parse_args()
-    model_type = args.net
+    model_type = args.model
 
     if model_type is None:
         model_type = input('Enter model type (cnn / lstm / pooling): ')

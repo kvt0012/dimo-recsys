@@ -14,9 +14,9 @@ from mrecsys.utils.dataset import load_latest_interactions
 
 os.chdir(os.path.dirname(__file__))
 
-NUM_SAMPLES = 1
-N_ITER = list(range(15, 15 + 1, 5))
-FACTORS = list(range(16, 16 + 1, 8))
+NUM_SAMPLES = 100
+N_ITER = list(range(15, 75 + 1, 5))
+FACTORS = list(range(8, 128 + 1, 8))
 
 nproc = multiprocessing.cpu_count()
 
@@ -72,7 +72,7 @@ def evaluate_lmf_model(hyperparameters, train, test, validation):
     return test_eval, val_eval
 
 
-def run(train, test, validation, model_type):
+def tuning(train, test, validation, model_type):
 
     sample_fnc = sample_factorization_hyperparameters
     if model_type == 'als':
@@ -102,24 +102,29 @@ def run(train, test, validation, model_type):
             print('test_eval:', test_eval)
             print('val_eval:', val_eval)
             results.save(hyperparameters, test_eval, val_eval)
-        except Exception as e:
+        except KeyboardInterrupt as e:
             raise e
+        except:
+            pass
 
     return results
 
 
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--model', help='define the network (als / bpr / lmf)')
-    args = parser.parse_args()
-    model_type = args.model
+def run(model_type=None):
     if model_type is None:
         model_type = input('Enter model type (als / bpr / lmf): ')
     interactions, time_code, _, _ = load_latest_interactions()
     interactions = interactions.tocsr().T.tocsr()
     train, rest = train_test_split(interactions)
     test, validation = train_test_split(rest)
-    # print('Split into \n {} and \n {} and \n {}.'.format(train, test, validation))
+    # print('Split into \n {} and \n {} and \n {}.'.format(train, factorization, validation))
 
-    run(train, test, validation, model_type)
+    tuning(train, test, validation, model_type)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model', help='define the network (als / bpr / lmf)')
+    args = parser.parse_args()
+    model_type = args.model
+    run(model_type)

@@ -4,10 +4,9 @@ import mrecsys.factorization.service
 import numpy as np
 import os
 
+os.chdir(os.path.dirname(__file__))
 service = SocketServer(mrecsys.factorization.service.__config_path__)
 inference_unit = InferenceUnit(mrecsys.factorization.__model_path__, 'als')
-
-os.chdir(os.path.dirname(__file__))
 
 
 def handle_factorization_result(result, selected_items=None):

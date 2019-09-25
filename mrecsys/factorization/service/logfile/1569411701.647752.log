@@ -1,2 +1,0 @@
-2019-09-25 18:41:46.054 ERROR deploy - _client_thread: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
-2019-09-25 18:41:46.055 ERROR deploy - _client_thread: None

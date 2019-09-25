@@ -1,2 +1,0 @@
-2019-09-25 19:07:19.058 ERROR deploy - _client_thread: module 'numpy' has no attribute 'apply'
-2019-09-25 19:07:19.058 ERROR deploy - _client_thread: None

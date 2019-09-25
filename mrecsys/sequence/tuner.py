@@ -16,9 +16,8 @@ from mrecsys.utils.dataset import load_latest_interactions
 os.chdir(os.path.dirname(__file__))
 
 CUDA = (os.environ.get('CUDA') is not None or shutil.which('nvidia-smi') is not None)
-print('CUDA:', CUDA)
 
-NUM_SAMPLES = 200
+NUM_SAMPLES = 100
 LOSSES = ['bpr', 'pointwise', 'hinge', 'adaptive_hinge']
 N_ITER = list(range(35, 75, 5))
 METRICS = ['mrr', 'p@k', 'r@k', 'rmse']
@@ -136,7 +135,7 @@ def evaluate_pooling_model(hyperparameters, train, test, validation, random_stat
     return test_eval, val_eval
 
 
-def run(train, test, validation, random_state, model_type):
+def tuning(train, test, validation, random_state, model_type):
 
     if model_type != 'immf':
         train = train.to_sequence()
@@ -177,24 +176,31 @@ def run(train, test, validation, random_state, model_type):
             print('test_eval:', test_eval)
             print('val_eval:', val_eval)
             results.save(hyperparameters, test_eval, val_eval)
+        except KeyboardInterrupt as e:
+            raise e
         except:
             pass
 
     return results
 
 
-if __name__ == '__main__':
+def run(model_type=None):
     random_state = mrecsys.sequence.__random_state__
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--net', help='define the network (cnn / lstm / pooling)')
-    args = parser.parse_args()
-    model_type = args.net
     if model_type is None:
-        model_type = input('Enter model type (cnn / lstm / pooling):')
+        model_type = input('Enter model type (cnn / lstm / pooling): ')
+    print('CUDA:', CUDA)
     interactions, time_code, _, _ = load_latest_interactions()
-    train, rest = user_based_train_test_split( random_state=random_state)
+    train, rest = user_based_train_test_split(interactions, random_state=random_state)
     test, validation = user_based_train_test_split(rest, random_state=random_state)
     print('Split into \n {} and \n {} and \n {}.'.format(train, test, validation))
 
-    run(train, test, validation, random_state, model_type)
+    tuning(train, test, validation, random_state, model_type)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model', help='define the network (cnn / lstm / pooling)')
+    args = parser.parse_args()
+    model_type = args.model
+    run(model_type)

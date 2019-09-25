@@ -27,7 +27,7 @@ def _train_als(hyperparameters, train):
                                     num_threads=nproc)
 
     model.fit(train)
-#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), test.T.tocsr(), K=10)}
+#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), factorization.T.tocsr(), K=10)}
 #    val_eval = {'p@k': precision_at_k(model, train.T.tocsr(), validation.T.tocsr(), K=10)}
     return model
 
@@ -39,7 +39,7 @@ def _train_bpr(hyperparameters, train):
                                         num_threads=nproc)
 
     model.fit(train)
-#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), test.T.tocsr(), K=10)}
+#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), factorization.T.tocsr(), K=10)}
 #    val_eval = {'p@k': precision_at_k(model, train.T.tocsr(), validation.T.tocsr(), K=10)}
     return model
 
@@ -51,7 +51,7 @@ def _train_lmf(hyperparameters, train):
                                         num_threads=nproc)
 
     model.fit(train)
-#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), test.T.tocsr(), K=10)}
+#    test_eval = {'p@k': precision_at_k(model, train.T.tocsr(), factorization.T.tocsr(), K=10)}
 #    val_eval = {'p@k': precision_at_k(model, train.T.tocsr(), validation.T.tocsr(), K=10)}
     return model
 

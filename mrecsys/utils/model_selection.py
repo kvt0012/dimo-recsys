@@ -39,7 +39,7 @@ class EvalResults:
     def save(self, hyperparams,
              test_eval, val_eval=None, time_code=None):
 
-        result = {'test': test_eval,
+        result = {'factorization': test_eval,
                   'hash': self._hash(hyperparams)}
         if time_code is not None:
             result['time_code'] = time_code
@@ -56,7 +56,7 @@ class EvalResults:
             if greater_is_better:
                 y = 1
             results = sorted([x for x in self],
-                             key=lambda x: (-y) * x['test'][metric])
+                             key=lambda x: (-y) * x['factorization'][metric])
         except:
             return None
 

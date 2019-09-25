@@ -1,13 +1,11 @@
 from mrecsys.utils.deploy import SocketServer
 from mrecsys.utils.deploy import InferenceUnit
-import mrecsys.sequence
-from mrecsys.sequence import service
+import mrecsys.sequence.service
 import numpy as np
 import os
 
 os.chdir(os.path.dirname(__file__))
-
-service = SocketServer(service.__config_path__)
+service = SocketServer(mrecsys.sequence.service.__config_path__)
 inference_unit = InferenceUnit(mrecsys.sequence.__model_path__, 'cnn')
 
 
