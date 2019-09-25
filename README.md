@@ -12,9 +12,10 @@ pip3 install torch==1.2.0+cpu torchvision==0.4.0+cpu -f https://download.pytorch
 ```
 
 ### Usages:
-**model_type:** factorization, sequence
-######
-**request_type:** inference, update
+#### Arguments
+- **model_type:** factorization, sequence
+- **request_type:** inference, update
+#### Scripts
 - Start API
 ```
 python3 start_api.py -m <model_type> 
