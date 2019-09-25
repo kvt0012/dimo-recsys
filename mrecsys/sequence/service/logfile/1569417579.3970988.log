@@ -1,0 +1,2 @@
+2019-09-25 20:19:44.667 ERROR deploy - _client_thread: setdiff1d() missing 1 required positional argument: 'ar2'
+2019-09-25 20:19:44.668 ERROR deploy - _client_thread: None

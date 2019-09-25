@@ -1,0 +1,2 @@
+2019-09-25 20:09:15.748 ERROR deploy - _client_thread: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2019-09-25 20:09:15.748 ERROR deploy - _client_thread: None

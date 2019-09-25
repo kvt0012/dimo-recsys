@@ -1,0 +1,2 @@
+2019-09-25 19:08:19.013 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'apply_along_axis'
+2019-09-25 19:08:19.013 ERROR deploy - _client_thread: None

@@ -1,0 +1,2 @@
+2019-09-25 19:08:50.034 ERROR deploy - _client_thread: apply_along_axis() missing 1 required positional argument: 'arr'
+2019-09-25 19:08:50.034 ERROR deploy - _client_thread: None

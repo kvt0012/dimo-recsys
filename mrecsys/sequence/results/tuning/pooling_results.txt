@@ -1,0 +1,18 @@
+{"l2": 0.1, "n_iter": 10, "loss": "pointwise", "hash": "aed2b7bca005400169e34a5238f2e6d8", "learning_rate": 0.01, "test": {"mrr": 0.21556838146211493}, "validation": {"mrr": 0.214732712372183}}
+{"l2": 1e-06, "n_iter": 25, "loss": "bpr", "hash": "82225621cdb23e32fb72a076ac32eac2", "learning_rate": 0.1, "test": {"mrr": 0.2910511389955428}, "validation": {"mrr": 0.2832960590162481}}
+{"n_iter": 40, "test": {"mrr": 0.31768540456324956}, "validation": {"mrr": 0.3086706980967549}, "loss": "bpr", "hash": "1c1b476dfcfeec3113df987d61c48fe7"}
+{"n_iter": 45, "test": {"mrr": 0.32037088488375526}, "validation": {"mrr": 0.31044906822277324}, "loss": "bpr", "hash": "37a79f2d9e5ef176cdaf4d5e6bc39267"}
+{"n_iter": 50, "test": {"mrr": 0.32707257051998717}, "validation": {"mrr": 0.3193922473138561}, "loss": "bpr", "hash": "283d7e2e987e9a5cfbb9e5b4311ae45f"}
+{"n_iter": 55, "test": {"mrr": 0.32090970651353357}, "validation": {"mrr": 0.3125538588377472}, "loss": "bpr", "hash": "bc6b682ef5155edc4dca8941ee81712b"}
+{"n_iter": 60, "test": {"mrr": 0.3204010466818899}, "validation": {"mrr": 0.3114684839815545}, "loss": "bpr", "hash": "4c7dfbac9367386f6970eab0cb7f5e3f"}
+{"n_iter": 65, "test": {"mrr": 0.3204299324655515}, "validation": {"mrr": 0.31050211231796465}, "loss": "bpr", "hash": "a4d85dc14742131dce48c5385962a816"}
+{"n_iter": 70, "test": {"mrr": 0.32084550628466196}, "validation": {"mrr": 0.3112223451261725}, "loss": "bpr", "hash": "b3c0d9f93b38558cac2b724f413fc6a3"}
+{"n_iter": 75, "test": {"mrr": 0.32103449172889353}, "validation": {"mrr": 0.31055263426676233}, "loss": "bpr", "hash": "092459916a631c7132ba19b2d4508a18"}
+{"n_iter": 40, "test": {"mrr": 0.18144916110829232}, "validation": {"mrr": 0.16946491141040293}, "loss": "pointwise", "hash": "8b20369fe4bf3374e01a8e591ca9f0c6"}
+{"n_iter": 45, "test": {"mrr": 0.1894040993955077}, "validation": {"mrr": 0.17743326377379617}, "loss": "pointwise", "hash": "da1c0b1305c4921fb1c8e4f7497d1677"}
+{"n_iter": 50, "test": {"mrr": 0.1839382137681305}, "validation": {"mrr": 0.1735978808528858}, "loss": "pointwise", "hash": "0bb24c22ae8fab72b0e9fc3a9ac53cb7"}
+{"n_iter": 55, "test": {"mrr": 0.16909950166459445}, "validation": {"mrr": 0.1601931900049835}, "loss": "pointwise", "hash": "d454b0a4f3886fd0d90162a33c8e3a7c"}
+{"n_iter": 60, "test": {"mrr": 0.15716162413083645}, "validation": {"mrr": 0.14794835881977222}, "loss": "pointwise", "hash": "0e5f961978e889b319965d7134fbfc1d"}
+{"n_iter": 65, "test": {"mrr": 0.144393848515153}, "validation": {"mrr": 0.1348017830392306}, "loss": "pointwise", "hash": "4b614fab672674cc96d3aebd6afcd81e"}
+{"n_iter": 70, "test": {"mrr": 0.18758939821000453}, "validation": {"mrr": 0.17620754310279932}, "loss": "pointwise", "hash": "e31603ab6bc8e4d61701717115bbca2a"}
+{"n_iter": 75, "test": {"mrr": 0.18008751945912999}, "validation": {"mrr": 0.16822940356468727}, "loss": "pointwise", "hash": "55dffe72d34afcd7880999d70a617f13"}

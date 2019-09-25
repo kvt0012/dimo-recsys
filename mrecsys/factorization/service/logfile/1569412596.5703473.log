@@ -1,0 +1,2 @@
+2019-09-25 18:56:39.835 ERROR deploy - _client_thread: 'numpy.float64' object is not iterable
+2019-09-25 18:56:39.836 ERROR deploy - _client_thread: None

@@ -1,0 +1,2 @@
+2019-09-24 21:57:06.289 ERROR deploy - _client_thread: unhashable type: 'slice'
+2019-09-24 21:57:06.289 ERROR deploy - _client_thread: None

@@ -1,0 +1,2 @@
+2019-09-25 18:45:19.532 ERROR deploy - _client_thread: 'list' object has no attribute 'astype'
+2019-09-25 18:45:19.532 ERROR deploy - _client_thread: None

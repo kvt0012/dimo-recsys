@@ -1,0 +1,2 @@
+2019-09-25 22:47:44.857 ERROR deploy - _client_thread: handler() missing 2 required positional arguments: 'service_name' and 'service_token'
+2019-09-25 22:47:44.858 ERROR deploy - _client_thread: None

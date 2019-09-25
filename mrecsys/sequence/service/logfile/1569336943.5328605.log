@@ -1,0 +1,2 @@
+2019-09-24 21:55:51.542 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:55:51.542 ERROR deploy - _client_thread: None

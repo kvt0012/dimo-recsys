@@ -1,0 +1,22 @@
+2019-09-24 21:50:05.585 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:50:05.585 ERROR deploy - _client_thread: None
+2019-09-24 21:51:00.325 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:51:00.326 ERROR deploy - _client_thread: None
+2019-09-24 21:51:22.732 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:51:22.732 ERROR deploy - _client_thread: None
+2019-09-24 21:51:54.943 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:51:54.944 ERROR deploy - _client_thread: None
+2019-09-24 21:52:07.553 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:52:07.554 ERROR deploy - _client_thread: None
+2019-09-24 21:52:25.492 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:52:25.494 ERROR deploy - _client_thread: None
+2019-09-24 21:52:41.485 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:52:41.486 ERROR deploy - _client_thread: None
+2019-09-24 21:52:54.750 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:52:54.750 ERROR deploy - _client_thread: None
+2019-09-24 21:53:09.122 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:53:09.122 ERROR deploy - _client_thread: None
+2019-09-24 21:53:26.551 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:53:26.551 ERROR deploy - _client_thread: None
+2019-09-24 21:53:43.532 ERROR deploy - _client_thread: 'numpy.ndarray' object has no attribute 'encode'
+2019-09-24 21:53:43.532 ERROR deploy - _client_thread: None

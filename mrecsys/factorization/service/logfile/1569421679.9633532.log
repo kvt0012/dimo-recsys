@@ -1,0 +1,2 @@
+2019-09-25 21:28:03.310 ERROR deploy - _client_thread: local variable 'filter_items' referenced before assignment
+2019-09-25 21:28:03.311 ERROR deploy - _client_thread: None
