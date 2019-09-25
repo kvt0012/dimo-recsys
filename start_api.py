@@ -2,7 +2,7 @@ import argparse
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', help='define the model for starting api (factorization / sequence)')
+    parser.add_argument('--model', '-m', help='define the model for starting api (factorization / sequence)')
     args = parser.parse_args()
     model = args.model
 
