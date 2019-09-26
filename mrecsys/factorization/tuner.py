@@ -15,8 +15,8 @@ from mrecsys.utils.dataset import load_latest_interactions
 os.chdir(os.path.dirname(__file__))
 
 NUM_SAMPLES = 100
-N_ITER = list(range(15, 75 + 1, 5))
-FACTORS = list(range(8, 128 + 1, 8))
+N_ITER = list(range(15, 45 + 1, 5))
+FACTORS = list(range(8, 64 + 1, 8))
 
 nproc = multiprocessing.cpu_count()
 

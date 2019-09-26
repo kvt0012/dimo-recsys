@@ -39,7 +39,7 @@ class EvalResults:
     def save(self, hyperparams,
              test_eval, val_eval=None, time_code=None):
 
-        result = {'factorization': test_eval,
+        result = {'test': test_eval,
                   'hash': self._hash(hyperparams)}
         if time_code is not None:
             result['time_code'] = time_code
