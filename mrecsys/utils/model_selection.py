@@ -56,7 +56,7 @@ class EvalResults:
             if greater_is_better:
                 y = 1
             results = sorted([x for x in self],
-                             key=lambda x: (-y) * x['factorization'][metric])
+                             key=lambda x: (-y) * x['test'][metric])
         except:
             return None
 

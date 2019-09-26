@@ -96,6 +96,5 @@ if __name__ == '__main__':
         model_type = input('Enter model type (als / bpr / lmf): ')
     interactions, time_code, _, _ = load_latest_interactions()
     interactions = interactions.tocsr().T.tocsr()
-    print(time_code)
 
     run(interactions, time_code, model_type)
