@@ -37,7 +37,7 @@ class Indexer:
 
     def dumps(self, PATH):
         with open(PATH, 'w') as fp:
-            json.dump(self._val_to_idx, fp, sort_values=True)
+            json.dump(self._val_to_idx, fp)
 
     def print(self):
         print(self._val_to_idx)

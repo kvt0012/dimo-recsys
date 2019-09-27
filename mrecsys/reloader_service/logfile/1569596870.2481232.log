@@ -1,0 +1,6 @@
+2019-09-27 22:08:00.665 WARNING utils - check_blas_config: OpenBLAS detected. Its highly recommend to set the environment variable 'export OPENBLAS_NUM_THREADS=1' to disable its internal multithreading
+2019-09-27 22:08:00.665 DEBUG als - fit: Converting input to CSR format
+2019-09-27 22:08:00.706 DEBUG als - fit: Converted input to CSR in 0.041s
+2019-09-27 22:08:00.713 DEBUG als - fit: Calculated transpose in 0.005s
+2019-09-27 22:08:00.726 DEBUG als - fit: Initialized factors in 0.01328730583190918
+2019-09-27 22:08:00.726 DEBUG als - fit: Running 40 ALS iterations

@@ -23,7 +23,7 @@ def reload_data(user_col='user_id',
         - interactions.csv: interactions dataframe of indexed users and items
     """
     # dummy case
-    df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
+    df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
     df = df[[time_col, user_col, item_col, weight_col]]
 
     user_dict = Indexer(df[user_col].unique())
@@ -49,7 +49,7 @@ def reload_data(user_col='user_id',
     df['weight'] = df['weight'].astype(np.float32)
 
     df.to_csv(os.path.join(mrecsys.__dataset_path__,
-                           'interactions/interactions_{}.csv'.format(current_time)),
+                           'interactions/{}.csv'.format(current_time)),
               index=False)
 
 

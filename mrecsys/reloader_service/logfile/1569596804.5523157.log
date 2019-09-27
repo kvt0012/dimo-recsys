@@ -1,0 +1,4 @@
+2019-09-27 22:07:02.125 ERROR deploy - _client_thread: __init__() got an unexpected keyword argument 'sort_values'
+2019-09-27 22:07:02.132 ERROR deploy - _client_thread: None
+2019-09-27 22:07:38.475 ERROR deploy - _client_thread: __init__() got an unexpected keyword argument 'sort_values'
+2019-09-27 22:07:38.475 ERROR deploy - _client_thread: None

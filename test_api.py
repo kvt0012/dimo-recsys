@@ -57,20 +57,25 @@ def sequence_infer():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', '-m', help='define the model for testing api (factorization / sequence)')
+    parser.add_argument('--target', '-t', help='define the model for testing api (factorization / sequence)')
     parser.add_argument('--request', '-r', help='define the request type (inference / update)')
     args = parser.parse_args()
-    model = args.model
+    target = args.target
     request = args.request
 
     service_ip = "localhost"
-    if model == 'factorization':
+    if target == 'reloader':
+        service_port = 4000
+        service_name = "RELOADER"
+        service_token = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+
+    elif target == 'factorization':
         service_port = 6000
         service_name = "FACTORIZATION"
         service_token = "98f6f754bd9840503459f832d4b243ba36351ec8"
         infer = factorization_infer()
 
-    elif model == 'sequence':
+    elif target == 'sequence':
         service_port = 5000
         service_name = "SEQUENCE"
         service_token = "ee977806d7286510da8b9a7492ba58e2484c0ecc"

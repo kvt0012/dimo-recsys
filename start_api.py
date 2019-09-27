@@ -2,14 +2,17 @@ import argparse
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', '-m', help='define the model for starting api (factorization / sequence)')
+    parser.add_argument('--target', '-t', help='define the model for starting api (factorization / sequence)')
     args = parser.parse_args()
-    model = args.model
+    target = args.target
 
-    if model == 'factorization':
+    if target == 'reloader':
+        from mrecsys.reloader_service import api
+        api.run()
+    if target == 'factorization':
         from mrecsys.factorization.service import api
         api.run()
-    elif model == 'sequence':
+    elif target == 'sequence':
         from mrecsys.sequence.service import api
         api.run()
     else:
