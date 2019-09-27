@@ -22,17 +22,11 @@ def handler(revc_json):
         request = data['request']
 
         if request == 'update_latest':
-            if not mrecsys.reloader_service.__busy__:
-                threading.Thread(target=refresher.run)
-                response_json = {
-                    "status": "ok",
-                    "code": 200,
-                }
-            else:
-                response_json = {
-                    "status": "I am busy right now",
-                    "code": 415
-                }
+            refresher.run()
+            response_json = {
+                "status": "ok",
+                "code": 200,
+            }
         return response_json
 
 

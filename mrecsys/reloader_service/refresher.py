@@ -6,13 +6,11 @@ from mrecsys import reloader_service
 
 
 def run():
-    reloader_service.__busy__ = True
     reload_data(item_col='storegroup_id')
     f_trainer.run()
     s_trainer.run()
     request_update("localhost", 6000)
     request_update("localhost", 5000)
-    reloader_service.__busy__ = False
 
 if __name__ == '__main__':
     run()
