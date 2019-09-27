@@ -5,7 +5,7 @@ from mrecsys.utils.deploy import request_update
 
 
 if __name__ == '__main__':
-    reload_data(item_col='service_id')
+    reload_data(item_col='storegroup_id')
     f_trainer.run()
     s_trainer.run()
     request_update("localhost", 6000)
