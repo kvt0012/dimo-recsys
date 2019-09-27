@@ -7,7 +7,7 @@ from mrecsys import reloader_service
 
 def run():
     reloader_service.__busy__ = True
-    reload_data(item_col='service_id')
+    reload_data(item_col='storegroup_id')
     f_trainer.run()
     s_trainer.run()
     request_update("localhost", 6000)
