@@ -25,7 +25,6 @@ def reload_data(user_col='user_id',
     # dummy case
     # df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
     df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
-    item_col = 'storegroup_id'
     df = df[[time_col, user_col, item_col, weight_col]]
 
     user_dict = Indexer(df[user_col].unique())
