@@ -135,7 +135,7 @@ def evaluate_pooling_model(hyperparameters, train, test, validation, random_stat
     return test_eval, val_eval
 
 
-def tuning(train, test, validation, random_state, model_type):
+def tuning(train, test, validation, random_state, model_type, time_code):
 
     if model_type != 'immf':
         train = train.to_sequence()
@@ -154,7 +154,7 @@ def tuning(train, test, validation, random_state, model_type):
     else:
         raise ValueError('Unknown model type')
 
-    results = EvalResults(os.path.join(mrecsys.sequence.__result_path__, 'tuning/{}_result.txt'.format(model_type)))
+    results = EvalResults(os.path.join(mrecsys.sequence.__result_path__, 'tuning/{}_result_{}.txt'.format(model_type, time_code)))
     best_results = {}
     for metric in METRICS:
         if results.best(metric) is not None:
@@ -195,7 +195,7 @@ def run(model_type=None):
     test, validation = user_based_train_test_split(rest, random_state=random_state)
     print('Split into \n {} and \n {} and \n {}.'.format(train, test, validation))
 
-    tuning(train, test, validation, random_state, model_type)
+    tuning(train, test, validation, random_state, model_type, time_code)
 
 
 if __name__ == '__main__':

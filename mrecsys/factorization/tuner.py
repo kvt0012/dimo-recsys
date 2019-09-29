@@ -72,7 +72,7 @@ def evaluate_lmf_model(hyperparameters, train, test, validation):
     return test_eval, val_eval
 
 
-def tuning(train, test, validation, model_type):
+def tuning(train, test, validation, model_type, time_code):
 
     sample_fnc = sample_factorization_hyperparameters
     if model_type == 'als':
@@ -84,7 +84,7 @@ def tuning(train, test, validation, model_type):
     else:
         raise ValueError('Unknown model type')
 
-    results = EvalResults(os.path.join(mrecsys.factorization.__result_path__, 'tuning/{}_results.txt'.format(model_type)))
+    results = EvalResults(os.path.join(mrecsys.factorization.__result_path__, 'tuning/{}_results_{}.txt'.format(model_type, time_code)))
     best_result = results.best('p@k')
     print('Best {} result by p@k: {}'.format(model_type, best_result))
 
@@ -119,7 +119,7 @@ def run(model_type=None):
     test, validation = train_test_split(rest)
     # print('Split into \n {} and \n {} and \n {}.'.format(train, factorization, validation))
 
-    tuning(train, test, validation, model_type)
+    tuning(train, test, validation, model_type, time_code)
 
 
 if __name__ == '__main__':

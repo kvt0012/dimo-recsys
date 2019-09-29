@@ -1,1 +1,0 @@
-{"test": {"mrr": 0.3170223846221902}, "hash": "df2ac703c46eed5ff318a2995c4ae80c", "time_code": 1569317316, "validation": {"mrr": 0.3110526849344268}, "loss": "adaptive_hinge", "nonlinearity": "tanh", "dilation": [1, 1, 1, 1], "n_iter": 65, "dilation_multiplier": 1, "residual": true, "num_layers": 4, "kernel_width": 7}

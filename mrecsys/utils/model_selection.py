@@ -9,6 +9,7 @@ import pickle
 def select_latest_model(dirpath, model_type):
     files = [f for f in listdir(dirpath)
              if (isfile(join(dirpath, f)) and f.find(model_type) > -1 and f.find('model') > -1)]
+    files.sort()
     if len(files) > 0:
         try:
             time_code = files[-1].split('.')[0].split('_')[2]

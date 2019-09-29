@@ -65,6 +65,8 @@ def run(interactions=None, time_code=None, model_type='bpr'):
     if interactions is None or time_code is None:
         interactions, time_code, _, _ = load_latest_interactions()
 
+    interactions = interactions.tocsr().T.tocsr()
+
     if model_type == 'als':
         train_fnc = _train_als
     elif model_type == 'bpr':
@@ -74,7 +76,7 @@ def run(interactions=None, time_code=None, model_type='bpr'):
     else:
         raise ValueError('Unknown model type')
 
-    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_results.txt'.format(model_type)))
+    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_results_{}.txt'.format(model_type, time_code)))
     params = tuned_results.best("p@k")
     print('Training {} model with params {}'.format(model_type, params))
     model = train_fnc(params, interactions)
@@ -95,6 +97,5 @@ if __name__ == '__main__':
     if model_type is None:
         model_type = input('Enter model type (als / bpr / lmf): ')
     interactions, time_code, _, _ = load_latest_interactions()
-    interactions = interactions.tocsr().T.tocsr()
 
     run(interactions, time_code, model_type)

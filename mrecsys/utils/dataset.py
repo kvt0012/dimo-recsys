@@ -23,8 +23,8 @@ def reload_data(user_col='user_id',
         - interactions.csv: interactions dataframe of indexed users and items
     """
     # dummy case
-    # df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
-    df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
+    df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions1.csv'))
+    # df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
     df = df[[time_col, user_col, item_col, weight_col]]
 
     user_dict = Indexer(df[user_col].unique())
@@ -88,6 +88,7 @@ def load_latest_interactions():
     dirpath = os.path.join(mrecsys.__dataset_path__, 'interactions')
     files = [f for f in listdir(dirpath) if isfile(join(dirpath, f))]
     if len(files) > 0:
+        files.sort()
         path = os.path.join(dirpath, files[-1])
         print(path)
         return load_interactions(path)
