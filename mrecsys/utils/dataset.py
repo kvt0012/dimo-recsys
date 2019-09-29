@@ -15,7 +15,7 @@ def hash_time(_time):
 def reload_data(user_col='user_id',
                 item_col='item_id',
                 time_col='timestamp',
-                weight_col='weight'):
+                weight_col=None):
     """
     some code that crawl interactions data from database
     saving and indexing them in dataset directory:
@@ -23,7 +23,10 @@ def reload_data(user_col='user_id',
         - interactions.csv: interactions dataframe of indexed users and items
     """
     # dummy case
-    df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions1.csv'))
+    df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
+    if weight_col is None:
+        df['weight'] = 1
+        weight_col = 'weight'
     # df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
     df = df[[time_col, user_col, item_col, weight_col]]
 
