@@ -82,7 +82,7 @@ def run(interactions=None, time_code=None, model_type='cnn'):
     else:
         raise ValueError('Unknown model type')
 
-    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_result_{}.txt'.format(model_type, time_code)))
+    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_results.txt'.format(model_type, time_code)))
     params = tuned_results.best('mrr')
     print('Training {} model with: {} '.format(model_type, params))
 

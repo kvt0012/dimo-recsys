@@ -154,7 +154,7 @@ def tuning(train, test, validation, random_state, model_type, time_code):
     else:
         raise ValueError('Unknown model type')
 
-    results = EvalResults(os.path.join(mrecsys.sequence.__result_path__, 'tuning/{}_result_{}.txt'.format(model_type, time_code)))
+    results = EvalResults(os.path.join(mrecsys.sequence.__result_path__, 'tuning/{}_results.txt'.format(model_type, time_code)))
     best_results = {}
     for metric in METRICS:
         if results.best(metric) is not None:

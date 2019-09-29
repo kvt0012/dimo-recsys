@@ -84,7 +84,7 @@ def tuning(train, test, validation, model_type, time_code):
     else:
         raise ValueError('Unknown model type')
 
-    results = EvalResults(os.path.join(mrecsys.factorization.__result_path__, 'tuning/{}_results_{}.txt'.format(model_type, time_code)))
+    results = EvalResults(os.path.join(mrecsys.factorization.__result_path__, 'tuning/{}_results.txt'.format(model_type, time_code)))
     best_result = results.best('p@k')
     print('Best {} result by p@k: {}'.format(model_type, best_result))
 

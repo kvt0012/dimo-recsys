@@ -76,7 +76,7 @@ def run(interactions=None, time_code=None, model_type='bpr'):
     else:
         raise ValueError('Unknown model type')
 
-    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_results_{}.txt'.format(model_type, time_code)))
+    tuned_results = EvalResults(os.path.join(result_path, 'tuning/{}_results.txt'.format(model_type, time_code)))
     params = tuned_results.best("p@k")
     print('Training {} model with params {}'.format(model_type, params))
     model = train_fnc(params, interactions)
