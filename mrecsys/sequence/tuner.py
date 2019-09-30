@@ -19,7 +19,7 @@ CUDA = (os.environ.get('CUDA') is not None or shutil.which('nvidia-smi') is not 
 
 NUM_SAMPLES = 100
 LOSSES = ['bpr', 'pointwise', 'hinge', 'adaptive_hinge']
-N_ITER = list(range(35, 75, 5))
+N_ITER = list(range(15, 40, 5))
 METRICS = ['mrr', 'p@k', 'r@k', 'rmse']
 
 

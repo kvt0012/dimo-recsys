@@ -6,7 +6,7 @@ import os
 
 os.chdir(os.path.dirname(__file__))
 service = SocketServer(mrecsys.sequence.service.__config_path__)
-inference_unit = InferenceUnit(mrecsys.sequence.__model_path__, 'cnn')
+inference_unit = InferenceUnit(mrecsys.sequence.__model_path__, 'lstm')
 
 
 def handler(revc_json):

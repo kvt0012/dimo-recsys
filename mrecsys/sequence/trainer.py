@@ -59,7 +59,7 @@ def _train_pooling(hyperparameters, train, random_state):
     return model
 
 
-def run(interactions=None, time_code=None, model_type='cnn'):
+def run(interactions=None, time_code=None, model_type='lstm'):
     print('CUDA', CUDA)
     random_state = mrecsys.sequence.__random_state__
     if interactions is None or time_code is None:

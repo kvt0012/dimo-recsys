@@ -12,15 +12,17 @@ def factorization_infer():
         "service_name": "FACTORIZATION",
         "service_token": "98f6f754bd9840503459f832d4b243ba36351ec8",
         "data": {
-            # "request": "rank_items",
-            "request": "recommend",
+            "request": "rank_items",
+            #"request": "recommend",
             "inputs": {
-                "user_id": "1000125153834388186",
-                "selected_items": ["1023280480942069518",
-                                   "306446194545434834",
-                                   "3205701174830506022",
-                                   "3217347275587941674"],
-                "filter_items": ["6481221346259782889"]
+                "user_id": "6726113450852055787",
+                "selected_items": ["Coop Food",
+                                   "The Alley",
+                                   "Gong Cha",
+                                   "Ministop",
+                                   "Sumo BBQ",
+                                   "The Coffee House"],
+                "filter_items": ["Gong Cha"]
             }
         }
     }
@@ -40,12 +42,12 @@ def sequence_infer():
         "data": {
             "request": "rank_items",
             "inputs": {
-                "sequence": ["100459171840484639", "100670421557790535"],
-                "selected_items": ["1023280480942069518",
-                                   "306446194545434834",
-                                   "3205701174830506022",
-                                   "3217347275587941674"],
-                "filter_items": ["3217347275587941674"]
+                "sequence": ["Tocococo", "KFC"],
+                "selected_items": ["Circle K",
+                                   "Ministop",
+                                   "Gong Cha",
+                                   "The Alley"],
+                "filter_items": ["Ministop"]
             }
         }
     }
