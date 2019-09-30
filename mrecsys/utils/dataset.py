@@ -20,7 +20,7 @@ def reload_data(user_col='user_id',
     some code that crawl interactions data from database
     saving and indexing them in dataset directory:
         - dicts: id and indexed id of users and items
-        - interactions.csv: interactions dataframe of indexed users and items
+        - transactions.csv: interactions dataframe of indexed users and items
     """
     # dummy case
     df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
