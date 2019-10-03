@@ -32,3 +32,7 @@ python3 test_api.py -t <model_type> -r <request_type>
 ```
 python3 tuning.py -t <model_type> 
 ```
+- Reload dataset: load interaction dataset from PostgreSQL Server
+```
+python3 reload_dataset.py
+```
