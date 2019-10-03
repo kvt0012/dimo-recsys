@@ -1,2 +1,3 @@
 {"hash": "2aa58902e66c878959d897196045e6b0", "test": {"mrr": 0.9527296832625511}, "n_iter": 15, "time_code": 1569764070, "loss": "bpr", "validation": {"mrr": 0.9519720129116842}}
 {"test": {"mrr": 0.9775853102821068}, "hash": "8c91e1ce3444fa593277083b63ee630a", "time_code": 1569814619, "n_iter": 15, "validation": {"mrr": 0.9789064046884688}, "loss": "adaptive_hinge"}
+{"test": {"mrr": 0.9775853102821068}, "hash": "8c91e1ce3444fa593277083b63ee630a", "time_code": 1570033867, "n_iter": 15, "validation": {"mrr": 0.9789064046884688}, "loss": "adaptive_hinge"}

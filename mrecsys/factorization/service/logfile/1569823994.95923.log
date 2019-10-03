@@ -1,0 +1,2 @@
+2019-09-30 13:13:17.642 ERROR deploy - _client_thread: 'Interactions' object has no attribute 'T'
+2019-09-30 13:13:17.643 ERROR deploy - _client_thread: None

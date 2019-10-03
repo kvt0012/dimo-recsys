@@ -13,16 +13,11 @@ def factorization_infer():
         "service_token": "98f6f754bd9840503459f832d4b243ba36351ec8",
         "data": {
             "request": "rank_items",
-            #"request": "recommend",
+            # "request": "recommend",
             "inputs": {
-                "user_id": "6726113450852055787",
-                "selected_items": ["Coop Food",
-                                   "The Alley",
-                                   "Gong Cha",
-                                   "Ministop",
-                                   "Sumo BBQ",
-                                   "The Coffee House"],
-                "filter_items": ["Gong Cha"]
+                "user_id": 204,
+                "selected_items": [324, 224, 142, 196, 423, 293],
+                "filter_items": [31]
             }
         }
     }
@@ -42,12 +37,9 @@ def sequence_infer():
         "data": {
             "request": "rank_items",
             "inputs": {
-                "sequence": ["Tocococo", "KFC"],
-                "selected_items": ["Circle K",
-                                   "Ministop",
-                                   "Gong Cha",
-                                   "The Alley"],
-                "filter_items": ["Ministop"]
+                "sequence": [204, 308],
+                "selected_items": [324, 224, 142, 196, 423, 293],
+                "filter_items": [324]
             }
         }
     }

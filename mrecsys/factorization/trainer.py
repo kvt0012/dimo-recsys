@@ -60,7 +60,7 @@ result_path = mrecsys.factorization.__result_path__
 model_path = mrecsys.factorization.__model_path__
 
 
-def run(interactions=None, time_code=None, model_type='bpr'):
+def run(interactions=None, time_code=None, model_type='als'):
 
     if interactions is None or time_code is None:
         interactions, time_code, _, _ = load_latest_interactions()

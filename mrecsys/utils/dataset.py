@@ -7,15 +7,19 @@ import time
 from mrecsys.utils.indexer import Indexer
 from spotlight.interactions import Interactions
 
+import psycopg2 as pg
+import pandas.io.sql as psql
+import pandas as pd
+
 
 def hash_time(_time):
     return hashlib.sha1(str(_time).encode('utf-8')).hexdigest()[:10]
 
 
 def reload_data(user_col='user_id',
-                item_col='item_id',
-                time_col='timestamp',
-                weight_col=None):
+                item_col='brand_id',
+                time_col='created_at',
+                weight_col='type'):
     """
     some code that crawl interactions data from database
     saving and indexing them in dataset directory:
@@ -23,13 +27,21 @@ def reload_data(user_col='user_id',
         - transactions.csv: interactions dataframe of indexed users and items
     """
     # dummy case
-    df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
-    if weight_col is None:
-        df['weight'] = 1
-        weight_col = 'weight'
-    # df = pd.read_csv('https://storage.cloud.google.com/dimo_project/interactions.csv')
-    df = df[[time_col, user_col, item_col, weight_col]]
+    # df = pd.read_csv(os.path.join(mrecsys.__dataset_path__, 'dummy_data/transactions.csv'))
+    weight_dict = {
+        'view': 0.2,
+        'route': 0.5,
+        'transaction': 1.0
+    }
+    connection = pg.connect("host='localhost' dbname=dimo_test user=hkttp password='123456789'")
+    df = pd.read_sql_query('select id, {}, {}, {}, {} from interactions'.format(user_col, item_col, weight_col, time_col)
+                           , con=connection).\
+        sort_values(by='id').drop(columns='id').reset_index().drop(columns='index')
+    df[weight_col] = df[weight_col].apply(lambda x: weight_dict[x])
+    import math
+    df[time_col] = df[time_col].apply(lambda x: math.ceil(np.datetime64(x).astype(int) / 1000000.))
 
+    df = df[[time_col, user_col, item_col, weight_col]]
     user_dict = Indexer(df[user_col].unique())
     item_dict = Indexer(df[item_col].unique())
 
@@ -51,7 +63,6 @@ def reload_data(user_col='user_id',
     df['item_id'] = df['item_id'].astype(np.int32)
     df['timestamp'] = df['timestamp'].astype(np.int32)
     df['weight'] = df['weight'].astype(np.float32)
-
     df.to_csv(os.path.join(mrecsys.__dataset_path__,
                            'interactions/{}.csv'.format(current_time)),
               index=False)

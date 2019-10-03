@@ -6,7 +6,7 @@ import os
 
 os.chdir(os.path.dirname(__file__))
 service = SocketServer(mrecsys.factorization.service.__config_path__)
-inference_unit = InferenceUnit(mrecsys.factorization.__model_path__, 'bpr')
+inference_unit = InferenceUnit(mrecsys.factorization.__model_path__, 'als')
 
 
 def handle_factorization_result(result, selected_items=None):

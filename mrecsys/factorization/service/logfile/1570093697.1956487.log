@@ -1,0 +1,18 @@
+2019-10-03 16:12:49.796 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 16:12:49.799 ERROR deploy - _client_thread: None
+2019-10-03 17:13:57.088 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 17:13:57.088 ERROR deploy - _client_thread: None
+2019-10-03 17:15:48.384 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 17:15:48.384 ERROR deploy - _client_thread: None
+2019-10-03 17:16:23.661 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 17:16:23.662 ERROR deploy - _client_thread: None
+2019-10-03 17:21:05.419 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 17:21:05.420 ERROR deploy - _client_thread: None
+2019-10-03 17:23:20.728 ERROR deploy - _client_thread: Expecting value: line 1 column 1 (char 0)
+2019-10-03 17:23:20.729 ERROR deploy - _client_thread: None
+2019-10-03 17:36:13.297 ERROR deploy - _client_thread: Expecting property name enclosed in double quotes: line 2 column 3 (char 4)
+2019-10-03 17:36:13.298 ERROR deploy - _client_thread: None
+2019-10-03 17:37:00.892 ERROR deploy - _client_thread: Expecting ',' delimiter: line 11 column 3 (char 297)
+2019-10-03 17:37:00.892 ERROR deploy - _client_thread: None
+2019-10-03 17:39:11.887 ERROR deploy - _client_thread: Expecting property name enclosed in double quotes: line 11 column 13 (char 354)
+2019-10-03 17:39:11.887 ERROR deploy - _client_thread: None

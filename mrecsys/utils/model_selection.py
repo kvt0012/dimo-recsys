@@ -18,7 +18,7 @@ def select_latest_model(dirpath, model_type):
             elif files[-1].find('.pkl') > -1:
                 model = pickle.load(open(join(dirpath, files[-1]), 'rb'))
         except FileNotFoundError as e:
-            raise e('Model file format is not valid')
+            raise e
         return model, time_code
     raise FileNotFoundError('Not found any models')
 

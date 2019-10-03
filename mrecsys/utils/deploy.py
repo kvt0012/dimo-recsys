@@ -21,7 +21,7 @@ def request_update(service_ip, service_port, service_name, service_token):
         "service_token": service_token,
         "data": {
             "request": "update_latest",
-            }
+        }
     }
     soc.send(str(data).encode("utf8"))
     result_bytes = soc.recv(4096)
@@ -115,8 +115,9 @@ class SocketServer(object):
             print('Accepting connection from ' + ip + ':' + port)
             try:
                 Thread(target=self._client_thread, args=(conn, ip, port)).start()
-
+            except KeyboardInterrupt:
+                break
             except Exception as e:
                 self.logger.error(str(e))
                 self.logger.error(str(traceback.print_exc()))
-        soc.close()
+        self.soc.close()
