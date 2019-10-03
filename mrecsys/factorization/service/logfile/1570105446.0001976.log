@@ -1,0 +1,10 @@
+2019-10-03 19:24:10.823 ERROR deploy - _client_thread: Expecting value: line 1 column 18 (char 17)
+2019-10-03 19:24:10.824 ERROR deploy - _client_thread: None
+2019-10-03 19:28:00.648 ERROR deploy - _client_thread: Expecting ',' delimiter: line 1 column 54 (char 53)
+2019-10-03 19:28:00.648 ERROR deploy - _client_thread: None
+2019-10-03 19:28:08.278 ERROR deploy - _client_thread: Expecting ',' delimiter: line 1 column 54 (char 53)
+2019-10-03 19:28:08.278 ERROR deploy - _client_thread: None
+2019-10-03 19:28:45.592 ERROR deploy - _client_thread: Expecting value: line 1 column 152 (char 151)
+2019-10-03 19:28:45.592 ERROR deploy - _client_thread: None
+2019-10-03 20:07:19.049 ERROR deploy - _client_thread: Expecting property name enclosed in double quotes: line 10 column 4 (char 249)
+2019-10-03 20:07:19.049 ERROR deploy - _client_thread: None

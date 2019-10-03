@@ -6,9 +6,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     target = args.target
 
-    if target == 'reloader':
-        from mrecsys.reloader_service import api
-        api.run()
     if target == 'factorization':
         from mrecsys.factorization.service import api
         api.run()

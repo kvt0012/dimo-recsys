@@ -1,0 +1,6 @@
+2019-10-03 19:21:30.342 ERROR deploy - _client_thread: Expecting value: line 3 column 19 (char 22)
+2019-10-03 19:21:30.345 ERROR deploy - _client_thread: None
+2019-10-03 19:21:59.325 ERROR deploy - _client_thread: Expecting value: line 3 column 19 (char 22)
+2019-10-03 19:21:59.325 ERROR deploy - _client_thread: None
+2019-10-03 19:23:07.072 ERROR deploy - _client_thread: Expecting value: line 1 column 18 (char 17)
+2019-10-03 19:23:07.072 ERROR deploy - _client_thread: None

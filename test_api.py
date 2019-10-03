@@ -37,7 +37,7 @@ def sequence_infer():
         "data": {
             "request": "rank_items",
             "inputs": {
-                "sequence": [204, 308],
+                "sequence": [1, 38],
                 "selected_items": [324, 224, 142, 196, 423, 293],
                 "filter_items": [324]
             }
@@ -58,12 +58,8 @@ if __name__ == '__main__':
     request = args.request
 
     service_ip = "localhost"
-    if target == 'reloader':
-        service_port = 4000
-        service_name = "RELOADER"
-        service_token = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
 
-    elif target == 'factorization':
+    if target == 'factorization':
         service_port = 6000
         service_name = "FACTORIZATION"
         service_token = "98f6f754bd9840503459f832d4b243ba36351ec8"

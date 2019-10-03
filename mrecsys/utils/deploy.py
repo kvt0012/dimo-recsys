@@ -78,6 +78,7 @@ class SocketServer(object):
         try:
             revc_string = revc_bytes.decode("utf8").rstrip() \
                 .replace("'", '"').replace('(', '"(').replace(')', ')"')
+            print(revc_string)
             revc_json = json.loads(revc_string)
             res = str(self.request_handler(revc_json))
             print("Result of processing {} is:\n{}".format(revc_string, res))
