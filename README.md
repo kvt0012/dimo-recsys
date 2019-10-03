@@ -14,19 +14,21 @@ pip3 install torch==1.2.0+cpu torchvision==0.4.0+cpu -f https://download.pytorch
 ### Usages:
 #### Arguments
 - **model_type:** factorization, sequence
-- **request_type:** inference, update
+- **request_type:**
+  - inference (test model's inference ability)
+  - update (request api reload for new model)
 #### Scripts
 - Start API
 ```
-python3 start_api.py -m <model_type> 
+python3 start_api.py -t <model_type> 
 ```
 
 - Test API
 ```
-python3 test_api.py -m <model_type> -r <request_type>
+python3 test_api.py -t <model_type> -r <request_type>
 ```
 
 - Tuning Model:
 ```
-python3 tuning.py -m <model_type> 
+python3 tuning.py -t <model_type> 
 ```
