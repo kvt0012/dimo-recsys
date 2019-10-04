@@ -1,4 +1,6 @@
-## Recommender System Microservices
+# DevC Innovation Challenge - HKTTP Team
+
+## Recommender System Microservices for Dimo App
 Consist of two types of Recommender Model
   - **Factorization**: For Personalization by using Alternating Least Square powered by Implicit library
   - **Sequence**: For handle the problem "what's the next item to recommend fpr user based on sequence of his interacted items" (Session-based recommender system) powered by Spotlight library (using Pytorch)
