@@ -1,0 +1,4 @@
+2019-10-04 05:59:47.594 ERROR deploy - _client_thread: cannot call `vectorize` on size 0 inputs unless `otypes` is set
+2019-10-04 05:59:47.597 ERROR deploy - _client_thread: None
+2019-10-04 06:00:08.935 ERROR deploy - _client_thread: cannot call `vectorize` on size 0 inputs unless `otypes` is set
+2019-10-04 06:00:08.935 ERROR deploy - _client_thread: None
